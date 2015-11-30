@@ -2,89 +2,168 @@
 <html lang="fr">
 <head>
 	<meta charset="UTF-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="jquery.js"></script>
 	<title>Document</title>
 </head>
+
 <body>
 	
-<h1>tutoriel HTML et CSS</h1>
+<h1>Tutoriel HTML et CSS</h1>
+	<navbar>
+		<h2>Sommaire</h2>
+			<ul>
+				<li>
+					<a href="#intro">Intro</a>
+				</li>
+				<li>
+					<a href="#selecteur">Les sélecteurs id et class</a>
 
-	<h3>Avec quoi crée t'on une page web</h3>
+				</li>
+					<a href="#css">Le CSS</a>
+				<li>
+					<a href="#box">Box model</a>
+				</li>
+				<li>
+					<a href="#soc">SOC</a>
+				</li>
+			</ul>	
+	
 
-		<p>Si vous voulez le bloc note suffi. Mais ce n'est pas pratique.</p>
-		<p>Un editeur de texte spécialisé et mieu car cela permet d'avoir des raccourcis claviers et d'amélioré la mise en forme du texte en colorisant les balise html et css.</p>
-
-	<h3>Ouais ok... Mais sinon concretement cela se passe comment ?</h3>
-
-		<p>Bon voyons le squelette de base le minimum à produire c'est ça</p>
-
-		<code>
-
-		<!DOCTYPE html>
+	</navbar>
 		
-		<html lang="fr">
-		
-		<head>
-			<meta charset="UTF-8">
-			<title>Document</title>
-		</head>
-		
-		<body>
+		<h2 id="intro">Intro</h2>
+
+		<h3>Avec quoi crée t'on une page web</h3>
+
+			<p>Si vous voulez le bloc note note suffi. Mais ce n'est pas pratique.</p>
+			<p>Un editeur de texte spécialisé et mieu car cela permet d'avoir des raccourcis claviers et d'amélioré la mise en forme du texte en colorisant les balise html et css.</p>
+
+		<h3>Ouais ok... Mais sinon concretement cela se passe comment ?</h3>
+
+			<p>Bon voyons le squelette de base. le minimum à produire c'est ça</p>
+
+				<textarea>
+
+					<!DOCTYPE html>
+					
+					<html lang="fr">
+					
+					<head>
+						<meta charset="UTF-8">
+						<title>Document</title>
+					</head>
+					
+					<body>
+						
+					</body>
+					</html>
+				
+				</textarea>
+
+			<p>Commençons par ça &lt!DOCTYPE html/&gt cela dis à l'ordinateur que c'est un fichier html d'ailleur c'est une balise cela permet de configuré et mettre en forme le texte.</p>
 			
-		</body>
-		</html>
+			<p>Deuxio &lthtml lang="fr"/&gt là il dis à l'ordinateur qu'on ecrit en français.</p>
+			
+			<p>Ensuite la balise &lthead&gt c'est en gros la configuration de notre site cela n'est pas visible pour l'utilisateur directement sur sa page. <br/>
+			Vous avez remarquez que plus bas il y a ça &lt/head&gt 90% des balise souvre et se ferme comme la balise head. Il reste quand meme des exeption mais on classera cela plus tard pour que cela soit plus clair.</p>
+			
+			<p>Restons dans head. &ltmeta charset="UTF-8"&gt c'est dire à l'ordianteur de reconnaitre les accent utilisé en français</p>
+
+			<p>&lttitle&gt cela permet de donner un titre a votre site internet</p>
+
+			<p>&ltbody& c'est litteralment le corps du votre site. C'est la ou vous allez écrire son texte</p>
+
+			<p>Bon regardons les principaux définition</p>
+			
+			<h2>Les balises</h2>
+
+	<p>Elles permettent au navigateur de comprendre la structure de la page. L'utilisateur, lui, ne verra que le contenu compris dans ces balises.</p>
+
+	<p>Les balises ouvrantes & fermantes :</p>
+
+		&ltdiv&gt (balise ouvrante)
+			Contenu
+		&ltdiv&gt (balise fermante)
+
+	Les balises autofermantes :
+
+		&ltimg&gt(balise autofermante)
+
+	Les attributs de balises
+
+	Les attributs permettent de préciser les propriétés des éléments HTML.
+	Pour le cas de &ltimg&gt, l'attribut « src » permet de préciser la source (provenance) de l'image ou le « alt ». Si ce dernier attribut est obligatoire, il en existe des facultatifs comme l'attribut « title » permettant de renseigner sur la nature ou le contenu de l'image avec une infobulle. Ces différents attributs peuvent être additionnés et sont séparés par des espaces. Ils fonctionnent sur un système de clé/valeur.
+
+		&ltimg src="fichier.jpg" alt="Description de l'image" title="Mon image"&gt
+
 		
-		</code>
+
+
+	<h2 id="selecteur">Les sélecteurs id et class</h2>
+
+		<p>Les sélecteurs permettent d'interagir avec le contenu avec CSS et JS.</p> 
+
+		<p>L'attribut « id » identifie un élément de manière unique, alors que « class » permet une mise en forme (avec CSS par exemple)
+
+			<p>class="class1 class2 class3"</p>
+
+			<p>id="menu"</p>
 
 
 
+		<p>Autres balises</p>
+
+
+		<p>&ltdiv&gt 		→  Bloc</p>
+		<p>&ltspan&gt		→  Bout de texte inline</p>
+		<p>&ltbr&gt			→  Retour chariot</p>
+		<p>&ltnav&gt		→  Element de navigation</p>
+		<p>&ltblockquote&gt	→  Citation</p>
+		<p>&ltp&gt			→  Paragraphe</p>
+
+		<p>Il existe beaucoup d'autres balises, elles ont toute un sens sémantique pour le navigateur et permettent de mieux structurer notre page.</p>
+
+
+	<h2 id="css">Le CSS</h2>
+
+
+		<p>Les feuilles de style en cascade, généralement appelées CSS de l'anglais Cascading Style Sheets, forment un langage informatique qui décrit la présentation des documents HTML. On appelle cela ainsi, car le navigateur va lire le document de haut en bas. Ceux qui ont la plus grande priorité sont en bas. En voici la syntaxe :</p>
+		<textarea>
+			selecteur {
+				propriété:valeur;
+			}
+		</textarea>
+
+		<p>Les classes, qu'on a abordées plus haut, vont permettre de styliser précisément un ou plusieurs éléments de la page. Pour cela, on va utiliser les sélecteurs. En CSS désigne une class avec un (.) et un id avec un (#).</p>
+		<textarea>
+			Dans mon HTML :
+
+			<p class="class1">Hello</p>
+
+			Dans mon CSS :
+
+			.class1 {
+				color:red;
+			}
+		</textarea>
+			
+			
 
 
 
+	<h2 id="box">Box model</h2>
 
+			<p>C'est sandardisé les tailles des paddings (marge intérieur) et les marging (marge extérieur)</p>
 
+	</h2 id="soc">SOC<h2>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+			<p>C'est de séparé les different types de programmes. Par exemple on sépare en deux fichiers l'html et le CSS</p>
+			<p>Cela permet de séparé les taches pour les programmeurs (en gros chacun son language)</p>
+			<p>Plus de lisibilité</p>
+			<p>Enfin cela facile facilite la maintenance</p>
+		
 </body>
 </html>
 
